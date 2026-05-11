@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-solar-yellow: #F5A623;
+  --color-solar-amber: #E8890C;
+  --color-solar-navy: #1A2B4A;
+  --color-solar-navy-dark: #0F1B30;
+  --color-solar-navy-light: #243559;
+  --color-solar-light: #F9F5EE;
+  --color-solar-light-dark: #F0E9DA;
+  --color-solar-green: #2D9B6F;
+  --color-solar-red: #D94040;
+  --color-solar-orange: #F07020;
+
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Syne', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background-color: #F9F5EE;
+  color: #1A2B4A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Syne', system-ui, sans-serif;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #F5A623 var(--range-progress, 0%), #d4c9b5 var(--range-progress, 0%));
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #F5A623;
+  border: 3px solid white;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #F5A623;
+  border: 3px solid white;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+.section-enter {
+  animation: fadeSlideIn 0.35s ease forwards;
+}
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #E8890C; border-radius: 9999px; }
