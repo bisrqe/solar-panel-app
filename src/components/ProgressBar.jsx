@@ -33,7 +33,7 @@ export default function ProgressBar() {
             className="text-white font-bold text-lg tracking-tight"
             style={{ fontFamily: 'Syne, system-ui, sans-serif' }}
           >
-            SolarDiag
+            Solarlly
           </span>
         </div>
         <span className="text-[#F5A623] text-sm font-medium">

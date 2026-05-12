@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 
 const SolarContext = createContext(null);
 
-const STORAGE_KEY = 'solardiag_state';
+const STORAGE_KEY = 'solarlly_state';
 
 const defaultConsumptionData = {
   postalCode: '',
